@@ -4,6 +4,9 @@ import random
 
     
 number = random.randint(-10000, 10000)
+if not isinstance(number, int):
+        raise TypeError("number must be an integer")
+
 number_str = str(number)
 last_digit = int(number_str[-1])
 if number < 0:
