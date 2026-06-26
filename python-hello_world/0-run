@@ -1,3 +1,2 @@
 #!/bin/bash
-#Running a python file in the environment variable $PYFILE
 python3 "$PYFILE"
