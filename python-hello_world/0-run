@@ -1,0 +1,3 @@
+#!/usr/bin/python3
+#Running a python file in the environment variable $PYFILE
+python3 "$PYFILE"
