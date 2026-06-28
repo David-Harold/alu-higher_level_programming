@@ -12,13 +12,15 @@ if __name__ == "__main__":
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
     if operator == "+":
-        print(calculator_1.add(a, b))
+        result = calculator_1.add(a, b)
     elif operator == "-":
-        print(calculator_1.sub(a, b))
+        result = calculator_1.sub(a, b)
     elif operator == "*":
-        print(calculator_1.mul(a, b))
+        result = calculator_1.mul(a, b)
     elif operator == "/":
         if b == 0:
             print("Can't divide by zero!")
             sys.exit(1)
-        print(calculator_1.div(a, b))
+        result = calculator_1.div(a, b)
+    print("{} {} {} = {}".format(a,operator,b,result))
+
