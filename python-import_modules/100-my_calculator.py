@@ -22,5 +22,4 @@ if __name__ == "__main__":
             print("Can't divide by zero!")
             sys.exit(1)
         result = calculator_1.div(a, b)
-    print("{} {} {} = {}".format(a,operator,b,result))
-
+    print("{} {} {} = {}".format(a, operator, b, result))
