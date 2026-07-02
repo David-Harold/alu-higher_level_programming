@@ -6,4 +6,4 @@ def element_at(my_list, idx):
         return None
     if idx > 0 and idx <= len(my_list - 1):
         element = my_list[idx]
-        print("Element at index {} is {}".format(idx, element)i)
+        print("Element at index {} is {}".format(idx, element))
