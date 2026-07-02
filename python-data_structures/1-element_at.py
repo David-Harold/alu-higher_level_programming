@@ -4,5 +4,5 @@ def element_at(my_list, idx):
         return None
     elif idx > len(my_list) - 1:
         return None
-    if idx > 0 and idx <= len(my_list) - 1:
+    if idx >= 0 and idx <= len(my_list) - 1:
         return my_list[idx]
