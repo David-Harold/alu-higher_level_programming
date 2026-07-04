@@ -6,7 +6,7 @@ def print_matrix_integer(matrix=[[]]):
                 print("{}".format(integer), end = "")
             else:
                 print("{}".format(integer), end = " ")
-        print()
+        print("{}".format(""))
 matrix = [
             [1, 2, 3],
             [4, 5, 6],
