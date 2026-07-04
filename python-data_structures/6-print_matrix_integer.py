@@ -3,10 +3,10 @@ def print_matrix_integer(matrix=[[]]):
     for i in matrix:
         for idx, integer in enumerate(i):
             if i == len(i) -1:
-                print("{}".format(integer), end = "")
+                print("{:d}".format(integer), end = "")
             else:
-                print("{}".format(integer), end = " ")
-        print("{}".format(""))
+                print("{:d}".format(integer), end = " ")
+        print("{:s}".format(""))
 matrix = [
             [1, 2, 3],
             [4, 5, 6],
