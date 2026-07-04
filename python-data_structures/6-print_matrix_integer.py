@@ -1,8 +1,12 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
     for i in matrix:
-        print(*i)
-    
+        for idx, integer in enumerate(i):
+            if i == len(i) -1:
+                print("{}".format(integer), end = "")
+            else:
+                print("{}".format(integer), end = " ")
+        print()
 matrix = [
             [1, 2, 3],
             [4, 5, 6],
