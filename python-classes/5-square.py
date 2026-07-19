@@ -48,3 +48,12 @@ class Square:
             The area of the square (size squared).
         """
         return self.__size ** 2
+
+    def my_print(self):
+        """Public instatnce method that prints in stout the square
+        with the character #"""
+        if self.__size == 0:
+            print()
+        else:
+            for i in range(1, self.__size + 1):
+                print("#" * self.__size)
