@@ -1,0 +1,59 @@
+#!/bin/bash
+cat > 2-args.py << 'EOF'
+#!/usr/bin/python3
+if __name__ == "__main__":
+    from sys import argv
+
+    argc = len(argv) - 1
+    if argc == 0:
+        print("0 arguments.")
+    elif argc == 1:
+        print("1 argument:")
+    else:
+        print("{} arguments:".format(argc))
+
+    for i in range(1, len(argv)):
+        print("{}: {}".format(i, argv[i]))
+EOF
+chmod +x 2-args.py
+
+cat > 3-infinite_add.py << 'EOF'
+#!/usr/bin/python3
+if __name__ == "__main__":
+    from sys import argv
+
+    total = 0
+    for arg in argv[1:]:
+        total += int(arg)
+    print(total)
+EOF
+chmod +x 3-infinite_add.py
+
+curl -Lso "hidden_4.pyc" "https://github.com/alx-tools/0x02.py/raw/master/hidden_4.pyc"
+
+cat > 4-hidden_discovery.py << 'EOF'
+#!/usr/bin/python3
+if __name__ == "__main__":
+    names = [name for name in dir(__import__("hidden_4"))
+             if not name.startswith("__")]
+    for name in sorted(names):
+        print(name)
+EOF
+chmod +x 4-hidden_discovery.py
+
+cat > variable_load_5.py << 'EOF'
+#!/usr/bin/python3
+a = 98
+"""Simple variable
+"""
+EOF
+chmod +x variable_load_5.py
+
+cat > 5-variable_load.py << 'EOF'
+#!/usr/bin/python3
+if __name__ == "__main__":
+    from variable_load_5 import a
+
+    print(a)
+EOF
+chmod +x 5-variable_load.py

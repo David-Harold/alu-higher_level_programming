@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-"""Module that finds the biggest integer of a list."""
-
-
 def max_integer(my_list=[]):
-    """Return the biggest integer of a list, or None if the list is empty."""
+    if my_list:
+        temp = []
+        f1 = my_list[0]
+        temp.append(f1)
+        for i in my_list:
+            if i > temp[0]:
+                temp[0] = i
+        return temp[0]
     if len(my_list) == 0:
         return None
-    biggest = my_list[0]
-    for integer in my_list:
-        if integer > biggest:
-            biggest = integer
-    return biggest
