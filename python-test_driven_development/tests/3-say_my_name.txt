@@ -1,0 +1,34 @@
+The ``say_my_name`` function
+=============================
+
+Import the function:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Basic usage:
+
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+Only a first name:
+
+    >>> say_my_name("Bob")  # doctest: +NORMALIZE_WHITESPACE
+    My name is Bob
+
+first_name is not a string:
+
+    >>> say_my_name(12, "White")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+last_name is not a string:
+
+    >>> say_my_name("John", 12)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+Neither is a string:
+
+    >>> say_my_name(12, 12)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
